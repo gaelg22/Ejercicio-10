@@ -20,9 +20,14 @@ public class CorsConfig {
         config.addAllowedOrigin("http://localhost:4200");
         config.addAllowedOrigin("https://ejercicio-10-nt69.onrender.com");
 
+        config.setAllowedHeaders(List.of(
+            "http://localhost:4200"
+            "https://ejercicio-10-nt69.onrender.com"
+            "https://g10-zynn.onrender.com"
+                                        
+        ));
         config.setAllowedHeaders(List.of("*"));
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
+        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
