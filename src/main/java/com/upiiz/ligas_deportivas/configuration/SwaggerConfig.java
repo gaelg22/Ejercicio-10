@@ -23,7 +23,8 @@ import org.springframework.context.annotation.Configuration;
                         name = "Licencia MIT",
                         url = "https://opensource.org/licenses/MIT"
                 )
-        ),
+        ), 
+        /#
         servers = {
                 @Server(
                         url = "http://localhost:8080",
@@ -32,6 +33,7 @@ import org.springframework.context.annotation.Configuration;
 
 
         },
+        #/
 
 
         security = {
