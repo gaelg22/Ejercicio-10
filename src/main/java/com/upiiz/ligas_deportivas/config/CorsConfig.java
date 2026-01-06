@@ -18,7 +18,7 @@ public class CorsConfig {
 
         config.setAllowCredentials(true);
         config.addAllowedOrigin("http://localhost:4200");
-        config.addAllowedOrigin("https://ligas-deportivas.onrender.com");
+        config.addAllowedOrigin("https://ejercicio-10-nt69.onrender.com");
 
         config.setAllowedHeaders(List.of("*"));
         config.addAllowedHeader("*");
