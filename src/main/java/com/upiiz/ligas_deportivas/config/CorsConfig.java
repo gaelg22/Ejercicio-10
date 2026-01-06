@@ -1,10 +1,9 @@
 package com.upiiz.ligas_deportivas.config;
 
-import org.springframework.web.filter.CorsFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.List;
@@ -16,16 +15,22 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
 
+        // Permitir cookies / tokens
         config.setAllowCredentials(true);
-        
 
-        config.setAllowedHeaders(List.of(
+        // ORÍGENES PERMITIDOS
+        config.setAllowedOrigins(List.of(
             "http://localhost:4200",
-            "https://ejercicio-10-nt69.onrender.com",
-            "https://g10-zynn.onrender.com"                              
+            "https://g10-zynn.onrender.com"
         ));
+
+        // HEADERS PERMITIDOS
         config.setAllowedHeaders(List.of("*"));
-        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+
+        // MÉTODOS PERMITIDOS
+        config.setAllowedMethods(List.of(
+            "GET", "POST", "PUT", "DELETE", "OPTIONS"
+        ));
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
