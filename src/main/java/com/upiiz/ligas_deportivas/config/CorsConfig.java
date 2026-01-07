@@ -21,7 +21,8 @@ public class CorsConfig {
         // ORÍGENES PERMITIDOS
         config.setAllowedOrigins(List.of(
             "http://localhost:4200",
-            "https://g10-zynn.onrender.com"
+            "https://g10-zynn.onrender.com",
+            "https://proyecto-final-z1qz.onrender.com"
         ));
 
         // HEADERS PERMITIDOS
